@@ -1,0 +1,14 @@
+site:
+  title: "Kizzy Demo"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/developmentExecutable/demo.js"
+      api: "build/libs/demo.jar"
+    prod:
+      script: "build/distributions/demo.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
