@@ -9,3 +9,6 @@ pluginManagement {
 rootProject.name = "demo"
 
 include(":site")
+include(":core")
+include("core")
+include("core")

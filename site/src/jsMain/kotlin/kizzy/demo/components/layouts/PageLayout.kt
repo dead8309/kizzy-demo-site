@@ -1,17 +1,17 @@
 package kizzy.demo.components.layouts
 
-import androidx.compose.runtime.*
-import com.varabyte.kobweb.compose.css.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import kotlinx.browser.document
-import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.*
-import kizzy.demo.components.sections.Footer
-import kizzy.demo.components.sections.NavHeader
+import org.jetbrains.compose.web.css.percent
+import org.jetbrains.compose.web.dom.H1
+import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun PageLayout(title: String, content: @Composable () -> Unit) {
@@ -35,11 +35,9 @@ fun PageLayout(title: String, content: @Composable () -> Unit) {
             modifier = Modifier.fillMaxSize().textAlign(TextAlign.Center),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            NavHeader()
             H1 { Text(title) }
             content()
         }
-        // Associate the footer with the row that will get pushed off the bottom of the page if it can't fit.
-        Footer(Modifier.align(Alignment.Center).gridRowStart(2).gridRowEnd(3))
+
     }
 }
