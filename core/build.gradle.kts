@@ -33,6 +33,7 @@ kotlin {
                 implementation(libs.ktor.client.js)
                 implementation(libs.ktor.kotlinx.serialization)
                 implementation(libs.ktor.websockets)
+                implementation(libs.ktor.logging)
 
             }
         }

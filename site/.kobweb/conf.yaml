@@ -11,4 +11,4 @@ server:
       script: "build/distributions/demo.js"
       siteRoot: ".kobweb/site"
 
-  port: 8080
+  port: 3000
