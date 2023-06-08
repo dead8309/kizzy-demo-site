@@ -1,4 +1,5 @@
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
+import kotlinx.html.script
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -14,6 +15,13 @@ kobweb {
     app {
         index {
             description.set("Powered by Kobweb")
+            head.add {
+                script {
+                    async = true
+                    defer = true
+                    src = "https://js.hcaptcha.com/1/api.js"
+                }
+            }
         }
     }
 }
